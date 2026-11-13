@@ -1,0 +1,8 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="InscripcionEstilos.EtiquetaCampo">
+    <Grid ColumnDefinitions="160,*" ColumnSpacing="10">
+        <TextBlock x:Name="TextoEtiqueta" Text="Etiqueta" Foreground="{DynamicResource BrushTexto}" VerticalAlignment="Center"/>
+        <TextBox Grid.Column="1" x:Name="CajaTexto" PlaceholderText="Escribe aquí..." HorizontalAlignment="Stretch"/>
+    </Grid>
+</UserControl>

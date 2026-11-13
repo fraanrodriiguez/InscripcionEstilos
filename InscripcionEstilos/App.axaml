@@ -1,0 +1,49 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="InscripcionEstilos.App"
+             RequestedThemeVariant="Light">
+    <Application.Styles>
+        <FluentTheme />
+        <Style Selector="Button.primary">
+            <Setter Property="Background" Value="{DynamicResource BrushPrimario}"/>
+            <Setter Property="Foreground" Value="{DynamicResource BrushTextoSobrePrimario}"/>
+            <Setter Property="Width" Value="110"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+        <Style Selector="TextBox">
+            <Setter Property="Padding" Value="10,8"/>
+            <Setter Property="CornerRadius" Value="6"/>
+        </Style>
+        <Style Selector="TextBlock.seccion">
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="{DynamicResource BrushTitulo}"/>
+        </Style>
+        <Style Selector="Button.primary:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="{DynamicResource BrushPrimario}"/>
+            <Setter Property="TextElement.Foreground" Value="{DynamicResource BrushTextoSobrePrimario}"/>
+            <Setter Property="Opacity" Value="0.85"/>
+        </Style>
+    </Application.Styles>
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Light">
+                    <SolidColorBrush x:Key="BrushPrimario" Color="#1F4E79"/>
+                    <SolidColorBrush x:Key="BrushTextoSobrePrimario" Color="#FFFFFF"/>
+                    <SolidColorBrush x:Key="BrushFondo" Color="#F3F6FA"/>
+                    <SolidColorBrush x:Key="BrushTarjeta" Color="#FFFFFF"/>
+                    <SolidColorBrush x:Key="BrushTexto" Color="#1F2933"/>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Dark">
+                    <SolidColorBrush x:Key="BrushPrimario" Color="#808080"/>
+                    <SolidColorBrush x:Key="BrushTextoSobrePrimario" Color="#FFFFFF"/>
+                    <SolidColorBrush x:Key="BrushFondo" Color="#313131"/>
+                    <SolidColorBrush x:Key="BrushTarjeta" Color="#A6A6A6"/>
+                    <SolidColorBrush x:Key="BrushTexto" Color="#FFFFFF"/>
+                    <SolidColorBrush x:Key="BrushTitulo" Color="#313131"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

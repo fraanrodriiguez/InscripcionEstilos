@@ -1,0 +1,104 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="using:InscripcionEstilos"
+        mc:Ignorable="d"
+        d:DesignWidth="760"
+        d:DesignHeight="760"
+        x:Class="InscripcionEstilos.MainWindow"
+        Title="Inscripción al curso"
+        Width="760"
+        Height="760"
+        MinHeight="600"
+        MinWidth="600"
+        Background="{DynamicResource BrushFondo}">
+        <Border BorderBrush="{DynamicResource BrushPrimario}" BorderThickness="1">
+                <Grid RowDefinitions="Auto,*" Background="{DynamicResource BrushFondo}">
+                        <Border Grid.Row="0" Background="{DynamicResource BrushPrimario}" Padding="22,16">
+                                <Grid ColumnDefinitions="*,Auto">
+                                <StackPanel Spacing="4">
+                                        <TextBlock Text="Inscripción al curso" FontSize="24" Foreground="{DynamicResource BrushTextoSobrePrimario}" FontWeight="Bold"/>
+                                        <TextBlock Text="IES El Majuelo - Formación complementaria" FontSize="14" Foreground="{DynamicResource BrushTextoSobrePrimario}"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" Spacing="5">
+                                        <ToggleSwitch x:Name="TemaSwitch" OffContent="Tema Claro" OnContent="Tema Oscuro" IsCheckedChanged="TemaSwitch_IsCheckedChanged"/>
+                                </StackPanel>
+                                </Grid>
+                        </Border>
+                        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                                <StackPanel x:Name="PanelFormulario" Margin="20" Spacing="12">
+                                        <Border Background="{DynamicResource BrushTarjeta}" BorderBrush="{DynamicResource BrushPrimario}" BorderThickness="1" CornerRadius="8" Padding="14">
+                                                <StackPanel Spacing="10">
+                                                        <TextBlock Text="Datos personales" Classes="seccion"/>
+                                                        <Grid RowDefinitions="Auto,Auto,Auto,Auto" ColumnDefinitions="*" RowSpacing="12">
+                                                                <local:EtiquetaCampo Grid.Row="0" x:Name="NombreCampo" Titulo="Nombre" TextoAyuda="Tu nombre" HorizontalAlignment="Stretch"/>
+                                                                <local:EtiquetaCampo Grid.Row="1" Grid.Column="0" x:Name="ApellidosCampo" Titulo="Apellidos" TextoAyuda="Tus apellidos" HorizontalAlignment="Stretch"/>
+                                                                <Grid Grid.Row="2" ColumnDefinitions="160,*" ColumnSpacing="10">
+                                                                        <TextBlock Text="Fecha de nacimiento" VerticalAlignment="Center" Foreground="{DynamicResource BrushTexto}"/>
+                                                                        <DatePicker Grid.Column="1" HorizontalAlignment="Left"/>
+                                                                </Grid>
+                                                                <local:EtiquetaCampo Grid.Row="3" x:Name="CorreoCampo" Titulo="Correo electrónico" TextoAyuda="nombre@correo.com" HorizontalAlignment="Stretch"/>
+                                                        </Grid>
+                                                </StackPanel>
+                                        </Border>
+                                        <Border Background="{DynamicResource BrushTarjeta}" BorderBrush="{DynamicResource BrushPrimario}" BorderThickness="1" CornerRadius="8" Padding="14">
+                                                <StackPanel Spacing="10">
+                                                        <TextBlock Text="Curso" Classes="seccion"/>
+                                                <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="130,*" RowSpacing="10" ColumnSpacing="10">
+                                                        <TextBlock Text="Curso" VerticalAlignment="Center" Foreground="{DynamicResource BrushTexto}"/>
+                                                        <ComboBox x:Name="CursoComboBox" Grid.Column="1">
+                                                                <ComboBoxItem Content="Desarrollo de interfaces con Avalonia" IsSelected="True"/>
+                                                                <ComboBoxItem Content="Desarrollo Web Inicial"/>
+                                                                <ComboBoxItem Content="Programación (Java)"/>
+                                                                <ComboBoxItem Content="Base de datos"/>
+                                                        </ComboBox>
+                                                        <TextBlock Grid.Row="1" Text="Modalidad" VerticalAlignment="Center" Foreground="{DynamicResource BrushTexto}"/>
+                                                        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Spacing="15">
+                                                                <RadioButton Content="Presencial" IsChecked="True"/>
+                                                                <RadioButton Content="Online"/>
+                                                        </StackPanel>
+                                                </Grid>
+                                                </StackPanel>
+                                        </Border>
+                                        <Border Background="{DynamicResource BrushTarjeta}" BorderBrush="{DynamicResource BrushPrimario}" BorderThickness="1" CornerRadius="8" Padding="14">
+                                                <StackPanel Spacing="12">
+                                                        <TextBlock Text="Preferencias" Classes="seccion"/>
+                                                        <Grid ColumnDefinitions="90,*">
+                                                                <TextBlock Text="Intereses" VerticalAlignment="Center" Foreground="{DynamicResource BrushTexto}"/>
+                                                                <UniformGrid Grid.Column="1" Columns="3">
+                                                                        <CheckBox Content="Programación" IsChecked="True"/>
+                                                                        <CheckBox Content="Diseño" IsChecked="True"/>
+                                                                        <CheckBox Content="Bases de datos"/>
+                                                                        <CheckBox Content="Redes"/>
+                                                                        <CheckBox Content="Móvil"/>
+                                                                        <CheckBox Content="Videojuegos"/>
+                                                                </UniformGrid>
+                                                        </Grid>
+                                                        <Grid ColumnDefinitions="90,*" RowDefinitions="Auto,Auto" RowSpacing="5">
+                                                                <TextBlock Text="Nivel (1 a 5)" VerticalAlignment="Center" Foreground="{DynamicResource BrushTexto}"/>
+                                                                <Slider Grid.Column="1" Minimum="1" Maximum="5" IsSnapToTickEnabled="True" Value="3" TickFrequency="1" Foreground="{DynamicResource BrushPrimario}"/>
+                                                                <TextBlock Grid.Row="1" Grid.Column="1" Text="1 = principiante · 5 = avanzado" FontSize="11" Foreground="{DynamicResource BrushTexto}"/>
+                                                        </Grid>
+                                                        <Grid ColumnDefinitions="90,*">
+                                                                <TextBlock Text="Novedades" VerticalAlignment="Center" Foreground="{DynamicResource BrushTexto}"/>
+                                                                <ToggleSwitch Grid.Column="1" OffContent="Quiero recibir novedades por correo" OnContent="Quiero recibir novedades por correo"/>
+                                                        </Grid>
+                                                </StackPanel>
+                                        </Border>
+                                        <Border Background="{DynamicResource BrushTarjeta}" BorderBrush="{DynamicResource BrushPrimario}" BorderThickness="1" CornerRadius="8" Padding="14" Margin="0,0,0,14">
+                                                <StackPanel Spacing="10">
+                                                        <TextBlock Text="Observaciones" Classes="seccion"/>
+                                                        <TextBox PlaceholderText="Escribe aquí cualquier comentario..." AcceptsReturn="True" TextWrapping="Wrap" MaxLength="500" Height="150"/>
+                                                        <TextBlock Text="Máximo 500 caracteres." Foreground="{DynamicResource BrushTexto}" FontSize="11"/>
+                                                </StackPanel>
+                                        </Border>
+                                        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="20,10,20,10" Spacing="10">
+                                                <Button Classes="primary" Content="Limpiar"/>
+                                                <Button Classes="primary" Content="Enviar"/>
+                                        </StackPanel>
+                                </StackPanel>
+                        </ScrollViewer>
+                </Grid>
+        </Border>
+</Window>
