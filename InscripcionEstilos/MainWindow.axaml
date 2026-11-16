@@ -17,13 +17,13 @@
                 <Grid RowDefinitions="Auto,*" Background="{DynamicResource BrushFondo}">
                         <Border Grid.Row="0" Background="{DynamicResource BrushPrimario}" Padding="22,16">
                                 <Grid ColumnDefinitions="*,Auto">
-                                <StackPanel Spacing="4">
-                                        <TextBlock Text="Inscripción al curso" FontSize="24" Foreground="{DynamicResource BrushTextoSobrePrimario}" FontWeight="Bold"/>
-                                        <TextBlock Text="IES El Majuelo - Formación complementaria" FontSize="14" Foreground="{DynamicResource BrushTextoSobrePrimario}"/>
-                                </StackPanel>
-                                <StackPanel Grid.Column="1" VerticalAlignment="Center" Spacing="5">
-                                        <ToggleSwitch x:Name="TemaSwitch" OffContent="Tema Claro" OnContent="Tema Oscuro" IsCheckedChanged="TemaSwitch_IsCheckedChanged"/>
-                                </StackPanel>
+                                        <StackPanel Spacing="4">
+                                                <TextBlock Text="Inscripción al curso" FontSize="24" Foreground="{DynamicResource BrushTitulo}" FontWeight="Bold"/>
+                                                <TextBlock Text="IES El Majuelo - Formación complementaria" FontSize="14" Foreground="{DynamicResource BrushTitulo}"/>
+                                        </StackPanel>
+                                        <StackPanel Grid.Column="1" VerticalAlignment="Center" Spacing="5">
+                                                <ToggleSwitch x:Name="TemaSwitch" OffContent="Tema Claro" OnContent="Tema Oscuro" IsCheckedChanged="TemaSwitch_IsCheckedChanged"/>
+                                        </StackPanel>
                                 </Grid>
                         </Border>
                         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
@@ -45,20 +45,20 @@
                                         <Border Background="{DynamicResource BrushTarjeta}" BorderBrush="{DynamicResource BrushPrimario}" BorderThickness="1" CornerRadius="8" Padding="14">
                                                 <StackPanel Spacing="10">
                                                         <TextBlock Text="Curso" Classes="seccion"/>
-                                                <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="130,*" RowSpacing="10" ColumnSpacing="10">
-                                                        <TextBlock Text="Curso" VerticalAlignment="Center" Foreground="{DynamicResource BrushTexto}"/>
-                                                        <ComboBox x:Name="CursoComboBox" Grid.Column="1">
-                                                                <ComboBoxItem Content="Desarrollo de interfaces con Avalonia" IsSelected="True"/>
-                                                                <ComboBoxItem Content="Desarrollo Web Inicial"/>
-                                                                <ComboBoxItem Content="Programación (Java)"/>
-                                                                <ComboBoxItem Content="Base de datos"/>
-                                                        </ComboBox>
-                                                        <TextBlock Grid.Row="1" Text="Modalidad" VerticalAlignment="Center" Foreground="{DynamicResource BrushTexto}"/>
-                                                        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Spacing="15">
-                                                                <RadioButton Content="Presencial" IsChecked="True"/>
-                                                                <RadioButton Content="Online"/>
-                                                        </StackPanel>
-                                                </Grid>
+                                                        <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="130,*" RowSpacing="10" ColumnSpacing="10">
+                                                                <TextBlock Text="Curso" VerticalAlignment="Center" Foreground="{DynamicResource BrushTexto}"/>
+                                                                <ComboBox x:Name="CursoComboBox" Grid.Column="1">
+                                                                        <ComboBoxItem Content="Desarrollo de interfaces con Avalonia" IsSelected="True"/>
+                                                                        <ComboBoxItem Content="Desarrollo Web Inicial"/>
+                                                                        <ComboBoxItem Content="Programación (Java)"/>
+                                                                        <ComboBoxItem Content="Base de datos"/>
+                                                                </ComboBox>
+                                                                <TextBlock Grid.Row="1" Text="Modalidad" VerticalAlignment="Center" Foreground="{DynamicResource BrushTexto}"/>
+                                                                <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Spacing="15">
+                                                                        <RadioButton Content="Presencial" IsChecked="True"/>
+                                                                        <RadioButton Content="Online"/>
+                                                                </StackPanel>
+                                                        </Grid>
                                                 </StackPanel>
                                         </Border>
                                         <Border Background="{DynamicResource BrushTarjeta}" BorderBrush="{DynamicResource BrushPrimario}" BorderThickness="1" CornerRadius="8" Padding="14">

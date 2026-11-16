@@ -11,19 +11,13 @@ public partial class EtiquetaCampo : UserControl
 
     public string Titulo
     {
-        get => TextoEtiqueta.Text ?? "";
-        set => TextoEtiqueta.Text = value;
+        get => Label.Text ?? "";
+        set => Label.Text = value;
     }
 
     public string TextoAyuda
     {
-        get => CajaTexto.Watermark ?? "";
-        set => CajaTexto.Watermark = value;
-    }
-
-    public string Texto
-    {
-        get => CajaTexto.Text ?? "";
-        set => CajaTexto.Text = value;
+        get => Input.PlaceholderText ?? "";
+        set => Input.PlaceholderText = value;
     }
 }

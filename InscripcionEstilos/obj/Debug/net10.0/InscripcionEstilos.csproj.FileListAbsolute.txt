@@ -89,3 +89,4 @@
 /home/alumno/Documentos/DOCUMENTOS_FRO/DInt/TAREA 3/InscripcionEstilos/InscripcionEstilos/InscripcionEstilos/obj/Debug/net10.0/InscripcionEstilos.pdb
 /home/alumno/Documentos/DOCUMENTOS_FRO/DInt/TAREA 3/InscripcionEstilos/InscripcionEstilos/InscripcionEstilos/obj/Debug/net10.0/InscripcionEstilos.genruntimeconfig.cache
 /home/alumno/Documentos/DOCUMENTOS_FRO/DInt/TAREA 3/InscripcionEstilos/InscripcionEstilos/InscripcionEstilos/obj/Debug/net10.0/ref/InscripcionEstilos.dll
+/home/alumno/Documentos/DOCUMENTOS_FRO/DInt/TAREA 3/InscripcionEstilos/InscripcionEstilos/InscripcionEstilos/obj/Debug/net10.0/InscripcionEstilos.sourcelink.json

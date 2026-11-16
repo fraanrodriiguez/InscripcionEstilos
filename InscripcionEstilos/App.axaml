@@ -5,10 +5,13 @@
     <Application.Styles>
         <FluentTheme />
         <Style Selector="Button.primary">
-            <Setter Property="Background" Value="{DynamicResource BrushPrimario}"/>
-            <Setter Property="Foreground" Value="{DynamicResource BrushTextoSobrePrimario}"/>
+            <Setter Property="Background" Value="{DynamicResource BrushBotonFondo}"/>
+            <Setter Property="Foreground" Value="{DynamicResource BrushBoton}"/>
             <Setter Property="Width" Value="110"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="BorderBrush" Value="{DynamicResource BrushBotonBorde}"/>
+            <Setter Property="CornerRadius" Value="6" />
         </Style>
         <Style Selector="TextBox">
             <Setter Property="Padding" Value="10,8"/>
@@ -29,19 +32,26 @@
         <ResourceDictionary>
             <ResourceDictionary.ThemeDictionaries>
                 <ResourceDictionary x:Key="Light">
-                    <SolidColorBrush x:Key="BrushPrimario" Color="#1F4E79"/>
-                    <SolidColorBrush x:Key="BrushTextoSobrePrimario" Color="#FFFFFF"/>
+                    <SolidColorBrush x:Key="BrushPrimario" Color="#C1C1C5"/>
+                    <SolidColorBrush x:Key="BrushTextoSobrePrimario" Color="white"/>
                     <SolidColorBrush x:Key="BrushFondo" Color="#F3F6FA"/>
-                    <SolidColorBrush x:Key="BrushTarjeta" Color="#FFFFFF"/>
+                    <SolidColorBrush x:Key="BrushTarjeta" Color="white"/>
                     <SolidColorBrush x:Key="BrushTexto" Color="#1F2933"/>
+                    <SolidColorBrush x:Key="BrushTitulo" Color="black"/>
+                    <SolidColorBrush x:Key="BrushBotonFondo" Color="white"/>
+                    <SolidColorBrush x:Key="BrushBoton" Color="black"/>
+                    <SolidColorBrush x:Key="BrushBotonBorde" Color="black"/>
                 </ResourceDictionary>
                 <ResourceDictionary x:Key="Dark">
                     <SolidColorBrush x:Key="BrushPrimario" Color="#808080"/>
-                    <SolidColorBrush x:Key="BrushTextoSobrePrimario" Color="#FFFFFF"/>
+                    <SolidColorBrush x:Key="BrushTextoSobrePrimario" Color="white"/>
                     <SolidColorBrush x:Key="BrushFondo" Color="#313131"/>
                     <SolidColorBrush x:Key="BrushTarjeta" Color="#A6A6A6"/>
-                    <SolidColorBrush x:Key="BrushTexto" Color="#FFFFFF"/>
-                    <SolidColorBrush x:Key="BrushTitulo" Color="#313131"/>
+                    <SolidColorBrush x:Key="BrushTexto" Color="white"/>
+                    <SolidColorBrush x:Key="BrushTitulo" Color="White"/>
+                    <SolidColorBrush x:Key="BrushBotonFondo" Color="black"/>
+                    <SolidColorBrush x:Key="BrushBoton" Color="white"/>
+                    <SolidColorBrush x:Key="BrushBotonBorde" Color="White"/>
                 </ResourceDictionary>
             </ResourceDictionary.ThemeDictionaries>
         </ResourceDictionary>
